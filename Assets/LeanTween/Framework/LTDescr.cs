@@ -2303,6 +2303,16 @@ public class LTDescr
 
 		return this;
 	}
+
+    internal void setOnComplete(object v)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void setOnComplete(Action<Action<GameObject>> buttonanimcompl)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 //}

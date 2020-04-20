@@ -10,7 +10,7 @@ public class Pccameracontroller : MonoBehaviour
     public GameObject pcmonitor2;
     public GameObject pcleftcanvas;
     public GameObject pcrightcanvas;
-    public GameObject zuruckbutton;
+    public GameObject zuruckpanel; 
     
 
 
@@ -45,10 +45,10 @@ public class Pccameracontroller : MonoBehaviour
         if (gameObject.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().m_PathPosition == gameObject.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().m_Path.MaxPos)
         {
 
-            if (zuruckbutton != null)
+            if (zuruckpanel != null)
             {
-                LeanTween.alphaCanvas(zuruckbutton.GetComponent<CanvasGroup>(), 1, 0.5f);
-                zuruckbutton.GetComponent<CanvasGroup>().interactable = true;
+                LeanTween.alphaCanvas(zuruckpanel.GetComponent<CanvasGroup>(), 1, 0.5f);
+                zuruckpanel.GetComponent<CanvasGroup>().interactable = true;
             }
 
             if (pcmonitor1 != null && pcmonitor2 != null)

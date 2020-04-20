@@ -44,26 +44,6 @@ public  class Mastercontroller : MonoBehaviour
         }
     }
 
-    public void goBack()
-    {
-
-
-        switch (state)
-        {
-            case States.start:
-                break;
-            case States.entry:
-                break;
-            case States.pcmonitor:
-                state = States.entry;
-                break;
-            default:
-                break;
-        }
-
-
-
-    }
 
 }
 
