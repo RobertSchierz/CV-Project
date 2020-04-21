@@ -47,8 +47,12 @@ public class Pccameracontroller : MonoBehaviour
 
             if (zuruckpanel != null)
             {
+                if (zuruckpanel.GetComponent<CanvasGroup>().alpha == 0)
+                {
                 LeanTween.alphaCanvas(zuruckpanel.GetComponent<CanvasGroup>(), 1, 0.5f);
                 zuruckpanel.GetComponent<CanvasGroup>().interactable = true;
+                }
+                  
             }
 
             if (pcmonitor1 != null && pcmonitor2 != null)

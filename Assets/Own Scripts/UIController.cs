@@ -38,11 +38,18 @@ public class UIController : MonoBehaviour
 
                 if (allpathpositionsnull)
                 {
+                    if (entrycanvas.GetComponent<CanvasGroup>().alpha == 0)
+                    {
                     LeanTween.alphaCanvas(entrycanvas.GetComponent<CanvasGroup>(), 1, 0.5f);
                     entrycanvas.GetComponent<CanvasGroup>().interactable = true;
+                    }
 
+                    if (zuruckcanvas.GetComponent<CanvasGroup>().alpha == 1)
+                    {
                     LeanTween.alphaCanvas(zuruckcanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
                     zuruckcanvas.GetComponent<CanvasGroup>().interactable = false;
+                    }
+                       
                 }
 
        
@@ -56,18 +63,37 @@ public class UIController : MonoBehaviour
 
         if(GameObject.Find("Mastercontroller").GetComponent<Mastercontroller>().state == States.regal)
         {
-            LeanTween.alphaCanvas(entrycanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
-            entrycanvas.GetComponent<CanvasGroup>().interactable = false;
+            if (entrycanvas.GetComponent<CanvasGroup>().alpha == 1)
+            {
+                LeanTween.alphaCanvas(entrycanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
+                entrycanvas.GetComponent<CanvasGroup>().interactable = false;
+            }
 
-            LeanTween.alphaCanvas(zuruckcanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
-            zuruckcanvas.GetComponent<CanvasGroup>().interactable = false;
+            if (zuruckcanvas.GetComponent<CanvasGroup>().alpha == 1)
+            {
+                LeanTween.alphaCanvas(zuruckcanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
+                zuruckcanvas.GetComponent<CanvasGroup>().interactable = false;
+            }
         }
 
         if (GameObject.Find("Mastercontroller").GetComponent<Mastercontroller>().state == States.ich)
         {
-            LeanTween.alphaCanvas(entrycanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
-            entrycanvas.GetComponent<CanvasGroup>().interactable = false;
+            if (entrycanvas.GetComponent<CanvasGroup>().alpha == 1)
+            {
+                LeanTween.alphaCanvas(entrycanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
+                entrycanvas.GetComponent<CanvasGroup>().interactable = false;
+            }
+         
 
+        }
+
+        if (GameObject.Find("Mastercontroller").GetComponent<Mastercontroller>().state == States.pcmonitor)
+        {
+            if (entrycanvas.GetComponent<CanvasGroup>().alpha == 1)
+            {
+                LeanTween.alphaCanvas(entrycanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
+                entrycanvas.GetComponent<CanvasGroup>().interactable = false;
+            }
         }
 
     }
