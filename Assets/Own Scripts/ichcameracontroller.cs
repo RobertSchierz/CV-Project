@@ -23,14 +23,16 @@ public class ichcameracontroller : MonoBehaviour
 
             if (GameObject.Find("Mastercontroller").GetComponent<Mastercontroller>().state == States.entry)
             {
+                ichcanvas.GetComponent<CanvasGroup>().blocksRaycasts = false;
                 if (ichcam.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().m_PathPosition == ichcam.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().m_Path.MinPos)
                 {
                     ichcam.GetComponent<CinemachineVirtualCamera>().Priority = 7;
                     ichcam.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().m_PathPosition = 0;
+                    
 
-                   
-               
-            
+
+
+
                 }
                 else
                 {
@@ -42,6 +44,7 @@ public class ichcameracontroller : MonoBehaviour
        
 
                 LeanTween.alphaCanvas(ichcanvas.GetComponent<CanvasGroup>(), 0.0f, 0.5f);
+                
                 gameObject.GetComponent<Animator>().SetBool("startich", false);
             }
 
@@ -58,6 +61,8 @@ public class ichcameracontroller : MonoBehaviour
     {
         ichcam.GetComponent<CinemachineVirtualCamera>().Priority = 11;
         gameObject.GetComponent<Animator>().SetBool("startich", true);
+        ichcanvas.GetComponent<CanvasGroup>().interactable = true;
+        ichcanvas.GetComponent<CanvasGroup>().blocksRaycasts = true;
 
         if (ichcam.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().m_PathPosition == ichcam.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().m_Path.MaxPos)
         {
