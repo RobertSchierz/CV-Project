@@ -2289,7 +2289,7 @@ GameObject:
   - component: {fileID: 549819570}
   m_Layer: 0
   m_Name: PC VCAM
-  m_TagString: Untagged
+  m_TagString: VCAMS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7207,6 +7207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entrycanvas: {fileID: 36159153}
   zuruckcanvas: {fileID: 765755867}
+  allcams: []
 --- !u!1 &1302381636
 GameObject:
   m_ObjectHideFlags: 0
@@ -8342,7 +8343,7 @@ GameObject:
   - component: {fileID: 1438398824}
   m_Layer: 0
   m_Name: Ich VCAM
-  m_TagString: Untagged
+  m_TagString: VCAMS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8354,7 +8355,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438398822}
-  m_LocalRotation: {x: 0.06675756, y: 0.34522375, z: -0.02462687, w: 0.9358192}
+  m_LocalRotation: {x: 0.06675754, y: 0.34522375, z: -0.024626859, w: 0.9358192}
   m_LocalPosition: {x: -0.1499691, y: 1.0423217, z: -2.8673716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9010,7 +9011,7 @@ GameObject:
   - component: {fileID: 1564925452}
   m_Layer: 0
   m_Name: Regal VCAM
-  m_TagString: Untagged
+  m_TagString: VCAMS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11154,6 +11155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ichcam: {fileID: 1438398822}
   ichcanvas: {fileID: 1500455385}
+  zuruckcanvas: {fileID: 765755867}
+  mainuicanvas: {fileID: 36159153}
 --- !u!95 &1890331761
 Animator:
   serializedVersion: 3

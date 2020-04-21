@@ -10,6 +10,7 @@ public  class Mastercontroller : MonoBehaviour
 
     public States state;
 
+
     private void Start()
     {
         state = States.start;

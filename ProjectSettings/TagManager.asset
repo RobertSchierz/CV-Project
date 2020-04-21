@@ -6,6 +6,7 @@ TagManager:
   tags:
   - UIButtons
   - UICanvas
+  - VCAMS
   layers:
   - Default
   - TransparentFX
