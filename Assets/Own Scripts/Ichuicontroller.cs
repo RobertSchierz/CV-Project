@@ -60,7 +60,7 @@ public class Ichuicontroller : MonoBehaviour
         if (abschlussbutton != null)
         {
             zeugnis.GetComponent<MeshRenderer>().enabled = true;
-            LeanTween.moveLocalZ(zeugnis, -0.4f, 2).setEaseInOutBack();
+            LeanTween.moveLocalZ(zeugnis, -0.4f, 2);
 
 
  

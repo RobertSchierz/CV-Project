@@ -7,8 +7,9 @@ using UnityEngine;
 public class ichcameracontroller : MonoBehaviour
 {
     public GameObject ichcam;
+    public GameObject ichcanvas;
 
-    // Update is called once per frame
+
     void Update()
     {
         if (ichcam.GetComponent<CinemachineVirtualCamera>() != null)
@@ -18,9 +19,17 @@ public class ichcameracontroller : MonoBehaviour
                 ichcamstart();
             }
 
+            if (GameObject.Find("Mastercontroller").GetComponent<Mastercontroller>().state == States.entry)
+            {
+                ichcam.GetComponent<CinemachineVirtualCamera>().Priority = 9;
+                ichcam.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().m_PathPosition = 0;
+                LeanTween.alphaCanvas(ichcanvas.GetComponent<CanvasGroup>(), 0.0f, 0.5f);
+                gameObject.GetComponent<Animator>().SetBool("startich", false);
+            }
 
 
-          
+
+
 
 
 
