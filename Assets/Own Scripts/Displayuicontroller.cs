@@ -42,7 +42,7 @@ public class Displayuicontroller : MonoBehaviour
         LeanTween.alphaCanvas(Klausureninfocanvas.GetComponent<CanvasGroup>(), 0, 0.0f);
         LeanTween.alphaCanvas(Modellinfocanvas.GetComponent<CanvasGroup>(), 0, 0.0f);
         LeanTween.alphaCanvas(FPZinfocanvas.GetComponent<CanvasGroup>(), 1, 0.5f);
-        videoplayer.GetComponent<Rendervideo>().playthevideo("http://robertschierz.de/videos/FPZ.mp4");
+        videoplayer.GetComponent<Rendervideo>().playthevideo("https://robertschierz.de/videos/FPZ.mp4");
         if (rightpccanvas != null)
         {
             LeanTween.alphaCanvas(rightpccanvas.GetComponent<CanvasGroup>(), 1, 0.5f);
@@ -54,7 +54,7 @@ public class Displayuicontroller : MonoBehaviour
         LeanTween.alphaCanvas(Klausureninfocanvas.GetComponent<CanvasGroup>(), 0, 0.0f);
         LeanTween.alphaCanvas(FPZinfocanvas.GetComponent<CanvasGroup>(), 0, 0.0f);
         LeanTween.alphaCanvas(Modellinfocanvas.GetComponent<CanvasGroup>(), 1, 0.5f);
-        videoplayer.GetComponent<Rendervideo>().playthevideo("http://robertschierz.de/videos/printer.mp4");
+        videoplayer.GetComponent<Rendervideo>().playthevideo("https://robertschierz.de/videos/printer.mp4");
         if (rightpccanvas != null)
         {
             LeanTween.alphaCanvas(rightpccanvas.GetComponent<CanvasGroup>(), 1, 0.5f);
@@ -66,7 +66,7 @@ public class Displayuicontroller : MonoBehaviour
         LeanTween.alphaCanvas(Modellinfocanvas.GetComponent<CanvasGroup>(), 0, 0.0f);
         LeanTween.alphaCanvas(FPZinfocanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
         LeanTween.alphaCanvas(Klausureninfocanvas.GetComponent<CanvasGroup>(), 1, 0.5f);
-        videoplayer.GetComponent<Rendervideo>().playthevideo("http://robertschierz.de/videos/klausurenhub.mp4");
+        videoplayer.GetComponent<Rendervideo>().playthevideo("https://robertschierz.de/videos/klausurenhub.mp4");
         if (rightpccanvas != null)
         {
             LeanTween.alphaCanvas(rightpccanvas.GetComponent<CanvasGroup>(), 1, 0.5f);

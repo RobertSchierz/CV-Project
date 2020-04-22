@@ -295,7 +295,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_TargetDisplay: 0
@@ -346,7 +346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: -102}
+  m_AnchoredPosition: {x: 16, y: -127}
   m_SizeDelta: {x: 383.38083, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!225 &27243480
@@ -2607,7 +2607,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549819566}
-  m_LocalRotation: {x: 0.04182471, y: -0.004039323, z: 0.00016909273, w: 0.99911684}
+  m_LocalRotation: {x: 0.041824725, y: -0.0040393076, z: 0.00016909208, w: 0.9991168}
   m_LocalPosition: {x: -3.2610197, y: 2.1012328, z: -14.80918}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5535,6 +5535,7 @@ GameObject:
   - component: {fileID: 925754302}
   - component: {fileID: 925754301}
   - component: {fileID: 925754300}
+  - component: {fileID: 925754304}
   m_Layer: 0
   m_Name: Ichinfo
   m_TagString: Untagged
@@ -5593,7 +5594,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "E-Mail \nRobert.Schierz@hotmail.de  \n\nMobil     \n0176 37838265 \r\n\nGeburtsdatum
-    \n08.09.1992 in Berlin \n\nGithub\ngithub.com/RobertSchierz\n\nTurboSquid\nturbosquid.com/Search/Artists/Robert-Schierz"
+    \n08.09.1992 in Berlin \n<i><u>\n<link=\"https://www.github.com/RobertSchierz\">Github</link>\n\n<link=\"https://www.turbosquid.com/Search/Artists/Robert-Schierz\">TurboSquid</link>\n\n<link=\"https://www.xing.com/profile/Robert_Schierz/cv\">Xing</link>\n\n<link=\"https://www.linkedin.com/in/robert-schierz-5100b2160/\">LinkedIn</link>\n</u></i>\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5667,12 +5668,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 925754301}
-    characterCount: 190
+    characterCount: 139
     spriteCount: 0
-    spaceCount: 27
-    wordCount: 24
-    linkCount: 0
-    lineCount: 15
+    spaceCount: 32
+    wordCount: 18
+    linkCount: 4
+    lineCount: 18
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -5689,6 +5690,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925754298}
   m_CullTransparentMesh: 0
+--- !u!114 &925754304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925754298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2615165d9881914b85fb64ece626ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &953245596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6581,7 +6594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: -42}
+  m_AnchoredPosition: {x: 14, y: -67}
   m_SizeDelta: {x: 383.38083, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!225 &1139876019
@@ -9046,7 +9059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 16}
+  m_AnchoredPosition: {x: 13, y: -9}
   m_SizeDelta: {x: 383.38083, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!225 &1498655941
@@ -15824,8 +15837,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -69.41243, y: 11}
-  m_SizeDelta: {x: -151.04366, y: 30}
+  m_AnchoredPosition: {x: -107.5, y: 11}
+  m_SizeDelta: {x: -227.25952, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &4428952258862981480
 GameObject:
@@ -16247,8 +16260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -69.412415, y: 11}
-  m_SizeDelta: {x: -151.04366, y: 30}
+  m_AnchoredPosition: {x: -107.5, y: 11}
+  m_SizeDelta: {x: -227.25952, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &4428952259783584474
 GameObject:
