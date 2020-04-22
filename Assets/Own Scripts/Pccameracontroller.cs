@@ -30,6 +30,8 @@ public class Pccameracontroller : MonoBehaviour
                 gameObject.GetComponent<CinemachineVirtualCamera>().Priority = 9;
                 gameObject.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().m_PathPosition = 0;
                 gameObject.GetComponent<Animator>().SetBool("statepc", false);
+                pcmonitor1.GetComponent<Animator>().SetBool("startmonitor", false);
+                pcmonitor2.GetComponent<Animator>().SetBool("startmonitor", false);
 
             }
 
