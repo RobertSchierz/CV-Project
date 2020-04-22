@@ -11,6 +11,14 @@ public class Rendervideo : MonoBehaviour
     public GameObject videoplane;
 
 
+    private void Update()
+    {
+        if (GameObject.Find("Mastercontroller").GetComponent<Mastercontroller>().state == States.entry)
+        {
+            videoPlayer.Stop();
+        }
+    }
+
     void Start()
     {
         
