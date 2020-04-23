@@ -8,5 +8,6 @@ public enum States
     entry = 1,
     pcmonitor = 2,
     regal = 3,
-    ich = 4
+    ich = 4,
+    video = 5
 }

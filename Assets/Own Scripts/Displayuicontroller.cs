@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
@@ -15,6 +16,8 @@ public class Displayuicontroller : MonoBehaviour
     public GameObject videocontrollcanvas;
 
     public GameObject[] videoplayers;
+
+    public GameObject videocam;
 
 
 
@@ -46,18 +49,34 @@ public class Displayuicontroller : MonoBehaviour
             videocontrollcanvas.GetComponent<CanvasGroup>().blocksRaycasts = false;
             leftpccanvas.GetComponent<CanvasGroup>().interactable = false;
 
-          /*  if (videoplane != null)
-            {
-                videoplane.GetComponent<MeshRenderer>().enabled = false;
-            }*/
+        
 
         }
+    }
+
+
+    public void stopthevideo()
+    {
+
+        if (videocam != null)
+        {
+            videocam.GetComponent<CinemachineVirtualCamera>().Priority = 6;
+            videocam.GetComponent<Animator>().SetBool("startvideocam", false);
+        }
+
     }
 
     public void startVideo()
     {
         if (videoplayers.Length != 0)
         {
+
+            if (videocam != null)
+            {
+                videocam.GetComponent<CinemachineVirtualCamera>().Priority = 11;
+                videocam.GetComponent<Animator>().SetBool("startvideocam", true);
+            }
+
             bool targetfound = false;
             foreach (GameObject player in videoplayers)
             {

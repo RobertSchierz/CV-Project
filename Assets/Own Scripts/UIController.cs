@@ -96,5 +96,20 @@ public class UIController : MonoBehaviour
             }
         }
 
+        if (GameObject.Find("Mastercontroller").GetComponent<Mastercontroller>().state == States.video)
+        {
+            if (entrycanvas.GetComponent<CanvasGroup>().alpha == 1)
+            {
+                LeanTween.alphaCanvas(entrycanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
+                entrycanvas.GetComponent<CanvasGroup>().interactable = false;
+            }
+
+            if (zuruckcanvas.GetComponent<CanvasGroup>().alpha == 1)
+            {
+                LeanTween.alphaCanvas(zuruckcanvas.GetComponent<CanvasGroup>(), 0, 0.5f);
+                zuruckcanvas.GetComponent<CanvasGroup>().interactable = false;
+            }
+        }
+
     }
 }

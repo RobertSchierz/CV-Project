@@ -36,20 +36,15 @@ public class Rendervideo : MonoBehaviour
 
     public void stopthevideo()
     {
-
+        //progressobject.GetComponent<VideoProgressBar>().setVideoPlayer(videoPlayer);
+        videoPlayer.Stop();
     }
+
 
     public void playthevideo()
     {
         progressobject.GetComponent<VideoProgressBar>().setVideoPlayer(videoPlayer);
         videoPlayer.Prepare();
-
-        //StartCoroutine(LoadfirstFrame());
-        //  videoPlayer.sendFrameReadyEvents = true;
-        //  videoPlayer.frameReady += OnNewFrame;
-
-        //StartCoroutine(ChangeTexture());
-
 
 
         if (isgame)
@@ -81,11 +76,7 @@ public class Rendervideo : MonoBehaviour
 
     }
 
-    void OnNewFrame(VideoPlayer source, long frameIdx)
-    {
-        Texture2D videoFrame = (Texture2D)source.texture;
-        videoplane.GetComponent<MeshRenderer>().materials[0].SetTexture("VideoRenderTexture",videoFrame);
-    }
+  
 
     IEnumerator ChangeTexture()
     {
@@ -106,21 +97,5 @@ public class Rendervideo : MonoBehaviour
 
     }
 
-    IEnumerator LoadfirstFrame()
-    {
-        
-        WaitForSeconds waitForSeconds = new WaitForSeconds(0.5f);
-        while (!videoPlayer.isPrepared)
-        {
-            yield return waitForSeconds;
-            break;
-        }
-        //rawImage.texture = videoPlayer.texture;
-
-        //videoplane.GetComponent<MeshRenderer>().materials[0].SetTexture("VideoRenderTexture", videoPlayer.texture);
-        videoPlayer.Pause();
-        videoplane.GetComponent<MeshRenderer>().enabled = true;
-
-
-    }
+  
 }

@@ -38,6 +38,9 @@ public  class Mastercontroller : MonoBehaviour
             case "ich":
                 state = States.ich;
                 break;
+            case "video":
+                state = States.video;
+                break;
 
 
             default:
