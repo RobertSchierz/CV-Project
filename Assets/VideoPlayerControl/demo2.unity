@@ -541,6 +541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Videoplayer
       objectReference: {fileID: 0}
+    - target: {fileID: 6335269665433556568, guid: bf2c3f01f59393649a7ed8efb7e6d34e, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: d06ad9f7c48bbc143898967e42eb190f, type: 2}
     - target: {fileID: 6817211602581614441, guid: bf2c3f01f59393649a7ed8efb7e6d34e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.7471128
