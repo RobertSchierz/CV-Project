@@ -19,14 +19,27 @@ public class Rendervideo : MonoBehaviour
         }
     }
 
-    void Start()
+
+    public void stopthevideo()
     {
-        
+
     }
 
     public void playthevideo(string url)
     {
+  
         videoPlayer.url = url;
+        videoPlayer.waitForFirstFrame = true;
+        videoPlayer.Prepare();
+
+        //StartCoroutine(LoadfirstFrame());
+        //  videoPlayer.sendFrameReadyEvents = true;
+        //  videoPlayer.frameReady += OnNewFrame;
+
+          //StartCoroutine(ChangeTexture());
+
+      
+
         if (videocontrollcanvas != null)
         {
             LeanTween.alphaCanvas(videocontrollcanvas.GetComponent<CanvasGroup>(), 1, 0.5f);
@@ -34,13 +47,40 @@ public class Rendervideo : MonoBehaviour
             videocontrollcanvas.GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
 
-        StartCoroutine(Play());
+    
+        
+    
 
     }
 
-    IEnumerator Play()
+    void OnNewFrame(VideoPlayer source, long frameIdx)
     {
-        videoPlayer.Prepare();
+        Texture2D videoFrame = (Texture2D)source.texture;
+        videoplane.GetComponent<MeshRenderer>().materials[0].SetTexture("VideoRenderTexture",videoFrame);
+    }
+
+    IEnumerator ChangeTexture()
+    {
+
+        WaitForSeconds waitForSeconds = new WaitForSeconds(0.5f);
+        while (!videoPlayer.isPrepared)
+        {
+            yield return waitForSeconds;
+            break;
+        }
+
+        videoPlayer.time = 0;
+        videoPlayer.Play();
+        videoplane.GetComponent<MeshRenderer>().materials[0].SetTexture("VideoRenderTexture", videoPlayer.texture);
+        videoPlayer.Pause();
+
+        videoplane.GetComponent<MeshRenderer>().enabled = true;
+
+    }
+
+    IEnumerator LoadfirstFrame()
+    {
+        
         WaitForSeconds waitForSeconds = new WaitForSeconds(0.5f);
         while (!videoPlayer.isPrepared)
         {
@@ -49,11 +89,9 @@ public class Rendervideo : MonoBehaviour
         }
         //rawImage.texture = videoPlayer.texture;
 
-        if (videoplane != null)
-        {
-            videoplane.GetComponent<MeshRenderer>().enabled = true;
-        }
-        videoPlayer.Play();
+        //videoplane.GetComponent<MeshRenderer>().materials[0].SetTexture("VideoRenderTexture", videoPlayer.texture);
+        videoPlayer.Pause();
+        videoplane.GetComponent<MeshRenderer>().enabled = true;
 
 
     }
