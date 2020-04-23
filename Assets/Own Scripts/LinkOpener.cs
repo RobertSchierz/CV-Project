@@ -15,7 +15,9 @@ public class LinkOpener : MonoBehaviour, IPointerClickHandler
         if (linkIndex != -1)
         { // was a link clicked?
             TMP_LinkInfo linkInfo = pTextMeshPro.textInfo.linkInfo[linkIndex];
-            Application.OpenURL(linkInfo.GetLinkID());
+         //   Application.OpenURL(linkInfo.GetLinkID());
+        
+            Application.ExternalEval("window.open( '"+ linkInfo.GetLinkID() +"' );");
         }
     }
 

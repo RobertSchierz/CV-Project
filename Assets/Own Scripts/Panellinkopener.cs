@@ -8,8 +8,11 @@ public class Panellinkopener : MonoBehaviour
     {
         if (link != "")
         {
-            Application.OpenURL(link);
+
+           // Application.OpenURL(link);
+            Application.ExternalEval("window.open( '"+ link +"' );");
         }
        
     }
 }
+ 
