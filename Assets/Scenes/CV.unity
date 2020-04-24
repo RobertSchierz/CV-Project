@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 311bf8c5e4b28d94b953444dcee9b711, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: b5b00f6493071294d987eddad3968571, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -2997,7 +2997,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.93801105, b: 0.8773585, a: 1}
   m_Intensity: 0.5
-  m_Range: 30
+  m_Range: 35
   m_SpotAngle: 179
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3071,7 +3071,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549819566}
-  m_LocalRotation: {x: 0.041824725, y: -0.0040393225, z: 0.00016909336, w: 0.9991168}
+  m_LocalRotation: {x: 0.041824725, y: -0.0040393076, z: 0.00016909208, w: 0.9991168}
   m_LocalPosition: {x: -3.2610197, y: 2.1012328, z: -14.80918}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3194,7 +3194,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.93801105, b: 0.8773585, a: 1}
   m_Intensity: 0.5
-  m_Range: 30
+  m_Range: 35
   m_SpotAngle: 179
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5954,7 +5954,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.93801105, b: 0.8773585, a: 1}
   m_Intensity: 0.5
-  m_Range: 30
+  m_Range: 35
   m_SpotAngle: 179
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6502,7 +6502,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "E-Mail \nRobert.Schierz@hotmail.de  \n\nMobil     \n0176 37838265 \r\n\nGeburtsdatum
+  m_text: "E-Mail \nme@robertschierz.de \n\nMobil     \n0176 37838265 \r\n\nGeburtsdatum
     \n08.09.1992 in Berlin \n<i><u>\n<link=\"https://www.github.com/RobertSchierz\">Github</link>\n\n<link=\"https://www.turbosquid.com/Search/Artists/Robert-Schierz\">TurboSquid</link>\n\n<link=\"https://www.xing.com/profile/Robert_Schierz/cv\">Xing</link>\n\n<link=\"https://www.linkedin.com/in/robert-schierz-5100b2160/\">LinkedIn</link>\n</u></i>\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6577,10 +6577,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 925754301}
-    characterCount: 139
+    characterCount: 132
     spriteCount: 0
-    spaceCount: 32
-    wordCount: 18
+    spaceCount: 31
+    wordCount: 17
     linkCount: 4
     lineCount: 18
     pageCount: 1
@@ -11497,7 +11497,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438398822}
-  m_LocalRotation: {x: 0.06675754, y: 0.34522375, z: -0.024626859, w: 0.9358192}
+  m_LocalRotation: {x: 0.066757545, y: 0.34522375, z: -0.02462686, w: 0.9358192}
   m_LocalPosition: {x: -0.1499691, y: 1.0423217, z: -2.8673716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12045,7 +12045,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523531625}
-  m_LocalRotation: {x: 0.0064324317, y: 0.12698859, z: -0.0008235288, w: 0.99188304}
+  m_LocalRotation: {x: 0.006432431, y: 0.12698866, z: -0.0008235287, w: 0.991883}
   m_LocalPosition: {x: 0.90505886, y: 0.33275604, z: -1.0728874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17214,7 +17214,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.93801105, b: 0.8773585, a: 1}
   m_Intensity: 0.5
-  m_Range: 30
+  m_Range: 35
   m_SpotAngle: 179
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

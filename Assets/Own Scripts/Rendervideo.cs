@@ -17,7 +17,10 @@ public class Rendervideo : MonoBehaviour
 
     public GameObject progressobject;
 
-
+    private void Start()
+    {
+        videoPlayer.Prepare();
+    }
     private void Update()
     {
      
@@ -44,7 +47,7 @@ public class Rendervideo : MonoBehaviour
     public void playthevideo()
     {
         progressobject.GetComponent<VideoProgressBar>().setVideoPlayer(videoPlayer);
-        videoPlayer.Prepare();
+       
 
 
         if (isgame)
